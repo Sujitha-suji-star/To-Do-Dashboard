@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart To-Do Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Smart To-Do Dashboard</h1>
+  <p id="currentTime"></p>
+
+  <!-- Input Section -->
+  <div class="input-container">
+    <input type="text" id="taskInput" placeholder="Enter a task" />
+
+    <!-- Section dropdown -->
+    <select id="sectionSelect">
+      <option value="fast">🚀 Critical & Urgent</option>
+      <option value="slow">🌙 Important but Flexible</option>
+      <option value="mandatory">📘 Mandatory Tasks</option>
+      <option value="optional">🍃 Optional / Can Skip</option>
+      <option value="early">🌅 Daily Routine - Early Morning</option>
+      <option value="morning">🌞 Daily Routine - Morning</option>
+      <option value="afternoon">🌤️ Daily Routine - Afternoon</option>
+      <option value="evening">🌆 Daily Routine - Evening</option>
+      <option value="night">🌙 Daily Routine - Night</option>
+    </select>
+
+    <!-- Deadline input -->
+    <input type="datetime-local" id="deadlineInput" />
+
+    <button onclick="addTask()">➕ Add Task</button>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button onclick="showSection('all')">All Tasks</button>
+    <button onclick="showSection('fast')">🚀 Critical & Urgent</button>
+    <button onclick="showSection('slow')">🌙 Important but Flexible</button>
+    <button onclick="showSection('mandatory')">📘 Mandatory</button>
+    <button onclick="showSection('optional')">🍃 Optional</button>
+    <button onclick="showSection('upcoming')">⏰ Upcoming Deadlines</button>
+    <button onclick="showSection('daily')">🌅 Daily Routine</button>
+  </div>
+
+  <!-- Sections -->
+  <div id="sections">
+    <div id="all" class="task-section"><h2>All Tasks</h2><ul></ul></div>
+    <div id="fast" class="task-section"><h2>🚀 Critical & Urgent</h2><ul></ul></div>
+    <div id="slow" class="task-section"><h2>🌙 Important but Flexible</h2><ul></ul></div>
+    <div id="mandatory" class="task-section"><h2>📘 Mandatory Tasks</h2><ul></ul></div>
+    <div id="optional" class="task-section"><h2>🍃 Optional / Can Skip</h2><ul></ul></div>
+    <div id="upcoming" class="task-section"><h2>⏰ Upcoming Deadlines</h2><ul></ul></div>
+
+    <!-- Daily Routine -->
+    <div id="daily" class="task-section">
+      <h2>🌅 Daily Routine</h2>
+      <h3>Early Morning</h3><ul id="early"></ul>
+      <h3>Morning</h3><ul id="morning"></ul>
+      <h3>Afternoon</h3><ul id="afternoon"></ul>
+      <h3>Evening</h3><ul id="evening"></ul>
+      <h3>Night</h3><ul id="night"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
