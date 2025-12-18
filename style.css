@@ -1,0 +1,99 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin: 20px;
+  background: #fffbea; /* light yellow background */
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#currentTime {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+input, select, button {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.tabs {
+  margin: 20px 0;
+}
+
+.tabs button {
+  margin: 5px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  background: #f0f0f0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tabs button:hover {
+  background: #ffe066;
+}
+
+.task-section {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #fff9c4; /* light yellow for sections */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.task-section h2 {
+  font-size: 1.4em;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #fffde7;
+  margin: 10px auto;
+  padding: 12px;
+  border-radius: 8px;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+li:hover {
+  transform: scale(1.02);
+  background: #fff59d;
+}
+
+.no-tasks {
+  color: #888;
+  font-style: italic;
+}
